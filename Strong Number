@@ -1,0 +1,27 @@
+x=int(input())
+strong=0
+not_strong=0
+#initializing with input variable x, as well as strong and not strong counts as 0
+while x!=-1:
+    sum=0
+    #initializing sum variable as 0
+    #iterating through the string of the number
+    for i in str(x):
+        fact=1
+        digit=int(i)
+        #initializing factorial variable as 1 for multiplying through the loop
+        # calculating the factorial of the digit using another nested loop
+        for j in range(1,digit+1):
+            fact*=j
+            #adding the obtained factorials to sum variable
+            sum+=fact
+    #checking if the result equals the number and incrementing the values respectively
+    if sum==x:
+    strong+=1
+    else:
+    not_strong+=1
+    #getting input for next number
+    x=int(input())
+#printing the counts of strong and non strong numbers
+print('STRONG_NUMBERS_COUNT is',strong)
+print('NON_STRONG_NUMBERS_COUNT is',not_strong)
