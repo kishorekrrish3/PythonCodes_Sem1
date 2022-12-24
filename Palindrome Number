@@ -1,0 +1,8 @@
+string=input()
+print(len(string))
+string=string.lower()
+string_rev=string[::-1]
+if string==string_rev:
+    print('palindrome')
+else:
+    print('not palindrome')
