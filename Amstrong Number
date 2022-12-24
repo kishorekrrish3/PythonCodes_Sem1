@@ -1,0 +1,26 @@
+x=int(input())
+armstrong=0
+not_armstrong=0
+#initializing the input variable, as well as armstrong and not_armstrong counts with 0
+while x!=-1:
+    y=str(x)
+    power=len(y)
+    #assigning the length of the number as the power variable
+    s=0
+    #iterating through number in string format variable y
+    for i in y:
+        #checking if the number is not any sign like -
+        if str(i).isnumeric():
+            #adding the sum with powered value of the digit
+            s+=(int(i)**power)
+    #checking if the number is equal to the result and incrementing the
+    # respective counts
+    if s==x:
+        armstrong+=1
+    else:
+        not_armstrong+=1
+    x = int(input())
+    #getting the input for next number from user
+#printing the counts
+print('AmstrongCount is',armstrong)
+print('NonAmstrongCount is',not_armstrong)
