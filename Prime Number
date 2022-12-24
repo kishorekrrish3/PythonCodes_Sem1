@@ -1,0 +1,26 @@
+x=int(input())
+#Initializing the prime and composite counts with 0
+prime_count=0
+composite_count=0
+#Using while loop to check if number equals -1
+while x!=-1:
+    x=int(input())
+    condition=True
+    #Initializing prime number condition variable as True and using
+    # if condition to check if number equal 1
+    if x!=1:
+        #checking for prime and composite conditions
+        for i in range(2,x):
+            if x%i==0:
+                condition=False
+                break
+            else:
+                condition=True
+    # incrementing the counts with the respective conditions
+    if condition==True:
+        prime_count+=1
+    else:
+        composite_count+=1
+#printing the counts
+print('Prime numbers : ',prime_count)
+print('Composite numbers : ',composite_count)
