@@ -1,0 +1,19 @@
+#defining a function browsing with 2 parameters (hours,mins)
+def browsing(hours,mins):
+    total=0
+    #getting hours and mins as parameters
+    #then adding up the totals with
+    # every 5 hours as 200
+    # every hour otherthan 5's as 50 per hour
+    # the mins as it is
+    total+=(hours//5)*200
+    total+=(hours%5)*50
+    total+=mins
+    # printing the total
+    print(total)
+#getting inputs from user for hrs and mins
+hours=int(input())
+mins=int(input())
+#calling the function
+browsing(hours,mins)
+
