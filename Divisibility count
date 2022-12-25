@@ -1,0 +1,16 @@
+num=int(input())
+div4=0
+notdiv4=0
+# Initializing the count for divisible and not divisible as 0
+while num!=-1:
+    #checking if the number is divisible by 4 and incrementing the counts respectively
+    if num%4==0:
+        div4+=1
+    else:
+        notdiv4+=1
+    # getting the next number as input
+    num=int(input())
+
+#printing the counts
+print('Four_Divisible_Count :',div4)
+print('Four_Not_Divisible_Count :',notdiv4)
