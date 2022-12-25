@@ -1,0 +1,23 @@
+dic={}
+#Adding elements to the dictionary using for loop
+for i in range(15):
+    state=input()
+    districts=int(input())
+    dic[state]=districts
+#getting the search key from user
+sk=input()
+lst=[]
+count=0
+#using for loop to count the number of states with the same districts as search key
+for i in dic.keys():
+    if dic[i]==dic[sk]:
+        lst.append(i)
+        count+=1
+        #incrementing the count everytime the condition is true
+#printing all the states filtered states in the form of a list placed inside another dictionary
+# as key.
+#printing the number of districts in the search key and the count too
+print(dic[sk])
+print(count)
+dic2={dic[sk]:lst}
+print(dic2)
