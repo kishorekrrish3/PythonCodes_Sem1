@@ -1,0 +1,30 @@
+#defining a function is_happy with parameter n to check for happy number
+def is_happy(n):
+    rem=0
+    su=0
+    #initializing rem and sum variables as 0
+    #iterating through all the digits of the number n as string
+    for i in str(n):
+        #changing type of loop variable to int for arithmatic operations
+        i=int(i)
+        #if number number is more than 0 then doing certain operations to check for happy number
+        while i>0:
+            rem=i%10
+            su+=(rem**2)
+            i=i//10
+        #then returning True if it is happy number
+    return su
+N=int(input())
+#getting value of N
+lst=[]
+#adding all the happy numbers into a list lst 
+for n in range(1,N+1):
+    result=n
+    while (result!=1 and result!=4):
+        result=is_happy(result)
+    if result==1:
+        lst.append(n)
+    elif result==4:
+        continue
+#printing the list lst
+print(lst)
