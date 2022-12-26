@@ -1,0 +1,21 @@
+import re
+dat=input()
+#Using re search funtion to check if the date is
+# in the correct format
+s=re.search('^\d{4}-[A-Z]{3}-\d{2}',dat)
+#if true then printing the correct format
+if s:
+    print('Correct format')
+#else changing the date format using list indices
+else:
+    lst=dat.split('-')
+    D=lst[0]
+    M=lst[1]
+    Y=lst[2]
+    #changing the month vakue from number to text format using a dictionary
+    months={1:'JAN',2:'FEB',3:'MAR',4:'APR',5:'MAY',6:'JUN',7:'JUL',8:'AUG',9:'SEP',10:'OCT',11:'NOV',12:'DEC'}
+    M=months[int(M)]
+    #printing the new corrected format
+    dat=Y+'-'+M+'-'+D
+    print(dat)
+    print('Format Corrected')
