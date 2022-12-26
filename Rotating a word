@@ -1,0 +1,28 @@
+#defining a function rotate word
+def rotate_word(word,num):
+    letters=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+    #creating a list of letters for processing the word
+    result=''
+    #iterating through the words in uppercase
+    for i in word.upper():
+        #checking if the letter's result is going beyond Z then processing
+        # it separately with if condition
+        if letters.index(i)>(len(letters)-(num+1)):
+            result+=letters[letters.index(i)-+(len(letters)-(num))]
+        #those letter's letter that does not cross Z is proeccesed separately
+        else:
+            result+=letters[letters.index(i)+num]
+    return result
+#getting the word and the number as input
+word=input()
+num=int(input())
+#creating a variable output and assigning it with the returned value of the called function
+output=rotate_word(word,num)
+print(output)
+#printing the output
+#checking if the output begins and ends with a vowel or not
+#and printing happy cool string or happy hot string respectively
+if (output[0].lower() and output[-1].lower()) in ['a','e','i','o','u']:
+    print('Happy Cool String')
+else:
+    print('Happy Hot String')
