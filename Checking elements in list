@@ -1,0 +1,18 @@
+#define a function first_last6 with a list as parameter
+def first_last6(lst):
+    condition=False
+    #initializing the condition variable as False
+    #using if and elif to check if the first or last element of list is 6
+    if lst[0]==6:
+        condition=True
+    elif lst[-1]==6:
+        condition=True
+    #returning the condition
+    return condition
+lst=[]
+#using for loop to add elements to the list
+for i in range(3):
+    x=int(input())
+    lst.append(x)
+#calling the function
+print(first_last6(lst))
