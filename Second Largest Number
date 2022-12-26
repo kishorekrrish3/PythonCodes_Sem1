@@ -1,0 +1,25 @@
+lst=[]
+for i in range(4):
+    x=int(input())
+    lst.append(x)
+#creating a list with 4 elements
+mx=max(lst[0],lst[1])
+second_mx=min(lst[1],lst[0])
+#initially assigning max and second max numbers of list as the max and min
+# of the first 2 numbers of the list
+for i in range(2,len(lst)):
+    #if the iterated current element is greater than max then
+    #assigning second max with max value and max with the current loop value
+    if lst[i]>mx:
+        second_mx=mx
+        mx=lst[i]
+    #if list element is not max but greater than second max then assigning it
+    # to second max
+    elif lst[i]!=mx and lst[i]>second_mx:
+        second_mx=lst[i]
+    #if the list element is not the second max but second max is same as max then
+    # assigning second max with list element
+    elif lst[i]!=second_mx and mx==second_mx:
+        second_mx=lst[i]
+# printing the second max value
+print('Second largest =',second_mx)
