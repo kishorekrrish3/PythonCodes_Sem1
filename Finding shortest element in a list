@@ -1,0 +1,19 @@
+N=int(input())
+lst=[]
+#getting value of N for number of elements from user
+for i in range(N):
+    #adding N elements to the list using for loop
+    x=input()
+    lst.append(x)
+lst2=[]
+#creating another list containing the lengths of the elements first list
+for j in lst:
+    lst2.append(len(j))
+mn=min(lst2)
+#printing the minimum value of the list
+print(lst[lst2.index(mn)])
+for i in range(len(lst2)):
+    #checking if there are other elements with the same length as the
+    # minimum value and printing them if any
+    if lst[i]!=lst[lst2.index(mn)] and lst2[i]==mn:
+        print(lst[i])
