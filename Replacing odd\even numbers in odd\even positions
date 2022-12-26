@@ -1,0 +1,36 @@
+lst=[]
+N=int(input())
+#Getting number of elements N from user
+#adding N elements to the list
+for i in range(N):
+    x=int(input())
+    lst.append(x)
+odd_count=0
+even_count=0
+odd_pos=[]
+even_pos=[]
+#initializing odd_count and even_count as 0
+#also creating lists even_pos and odd_pos to add the element position
+for j in range(len(lst)):
+    #checking if the element is odd number and in odd position
+    if (j+1)%2!=0 and lst[j]%2!=0:
+        #if yes replacing the number with string 'odd' 
+        #and incrementing odd_count with 1 and adding 
+        # the position of the element to odd_pos list
+        lst[j]='odd'
+        odd_count+=1
+        odd_pos.append(j)
+    #checking if the element is even number and in even position
+    elif (j+1)%2==0 and lst[j]%2==0:
+        #if yes replacing the number with string 'even' 
+        #and incrementing even_count with 1 and adding 
+        # the position of the element to even_pos list
+        lst[j]='even'
+        even_count+=1
+        even_pos.append(j)
+#printing all the results with 1 line gap
+print(lst,'\n')
+print('odd=',odd_count,'\n')
+print('oddpositionlist=',odd_pos,'\n')
+print('even=',even_count,'\n')
+print('evenpositionlist=',even_pos,'\n')
