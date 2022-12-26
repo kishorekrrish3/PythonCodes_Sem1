@@ -1,0 +1,18 @@
+N=int(input())
+d={}
+#Getting number of elements from user
+for i in range(N):
+    #Getting key and value from user as input
+    a=input()
+    b=input()
+    #adding the key-value to the dictionary
+    d[a]=b
+#getting search key from user
+sk=int(input())
+#checking if search key is in the dictionary
+for j in d.keys():
+    if j==sk:
+        print('Key existing')
+    else:
+        print('Key not existing')
+        break
