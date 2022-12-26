@@ -1,0 +1,8 @@
+import re
+x=input()
+names=re.split(' ',x)
+result=''
+result+=names[0][0]
+result+='.'
+result+=names[1]
+print(result)
